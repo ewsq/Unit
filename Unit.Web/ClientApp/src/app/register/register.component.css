@@ -1,0 +1,21 @@
+
+.t-center{
+    text-align: center;
+}
+.wapper{
+    margin-top: 4%;
+    display: flex;
+}
+.content-wapper{
+    /* border-radius: 6px;
+    padding-left: 8%;
+    padding-right: 8%; */
+    margin: auto;
+}
+.x-input{
+    border-radius: 6px;
+}
+.input-w{
+    border-width: 0px 0px 2px 0px;
+    border-color: rgb(0, 0, 0)
+}

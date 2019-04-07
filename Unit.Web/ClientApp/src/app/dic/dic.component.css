@@ -1,0 +1,16 @@
+
+.wapper{
+    
+}
+.wapper-content{
+    margin: auto;
+}
+.title{
+    font-size: 160px;
+    color: white;
+}
+.desc{
+    font-size: 40px;
+    margin-top:10px;
+    color: white;
+}

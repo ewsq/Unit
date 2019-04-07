@@ -1,0 +1,69 @@
+
+<div style="padding-top: 33px;margin: 2% 6%;">
+  <div style="margin: auto;">
+    <form nz-form [formGroup]="fg">
+        <div nz-row style="margin-bottom: 33px;margin: 0px 39px;">
+            <div nz-col class="unit-head">
+            <span style="color: #558ff2;font-weight: bold;font-size: 35px;">NAME</span> <span>单元名称</span>
+            <input nz-input formControlName='dname'/>
+          </div>
+          <div style="margin-top: 22px;margin-bottom: 22px;">
+              <span style="color: #558ff2;font-weight: bold;font-size: 35px;">BACKGROUND</span> <span>上传背景</span>
+              <br/>
+              <nz-upload [(nzFileList)]="fileList" [nzShowButton]="fileList.length<1" [nzBeforeUpload]="beforeUpload" [nzFilter]='filters'>
+                  <button nz-button><i nz-icon type="upload"></i><span>Select File</span></button>
+                </nz-upload>
+          </div>
+        </div>
+        <nz-form-item nz-row *ngFor="let control of controlArray; let i = index" style="text-align: center;">
+            <nz-form-label nz-col nzSpan='24' *ngIf="i == 0" style="margin-left: 42px;">
+              <span style="color: #558ff2;font-weight: bold;font-size: 35px;">WORD&EXPLAIN</span> <span>提示/记忆</span>
+            </nz-form-label>
+            <nz-form-control nz-col nzSpan='24'>
+              <input
+                nz-input
+                style="width: 46%; margin-right:1%;"
+                placeholder="提示部分"
+                [attr.id]="control.idt"
+                [formControlName]="control.idt"
+              />
+              <input
+                nz-input
+                style="width: 46%;"
+                placeholder="记忆部分"
+                [attr.id]="control.idr"  
+                [formControlName]="control.idr"
+              />
+              <i nz-icon type="minus-circle-o" class="dynamic-delete-button" (click)="removeField(control, $event)"></i>
+              <nz-form-explain
+                *ngIf="
+                  getFormControl(control.idt)?.dirty &&
+                  getFormControl(control.idr)?.hasError('required')
+                "
+              >
+              请输入提示&记忆内容
+              </nz-form-explain>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item style="margin:auto;text-align: center;">
+              <nz-form-control nzSpan='24'>
+                <button nz-button nzType="primary" style="width:60%;font-size: 22px;margin-bottom: 8px;font-weight: bold;height: auto;padding: 8px 0px;" (click)="exchange()">
+                <i>EXCHANGE</i><span *ngIf='rev'>(交换提示和记忆部分)</span>
+                </button>
+              </nz-form-control>
+            </nz-form-item>  
+          <nz-form-item style="margin:auto;text-align: center;">
+            <nz-form-control nzSpan='24'>
+              <button nz-button nzType="primary" style="width:60%;font-size: 22px;font-weight: bold;height: auto;padding: 8px 0px;" (click)="addField($event)">
+                <i nz-icon type="plus" style="display:inline-flex;"></i> <i>ADD GROUP</i>
+              </button>
+            </nz-form-control>
+          </nz-form-item>
+        <div style="margin: auto;text-align: center;">
+          <button nz-button nzType="primary" style="margin-top:12px;padding-top: 28px;width:60%;font-size: 22px;font-weight: bold;height: auto;padding: 8px 0px;" (click)='submitForm()'>
+            <i>FINISH</i>
+          </button>
+        </div>
+    </form>
+  </div>
+</div>

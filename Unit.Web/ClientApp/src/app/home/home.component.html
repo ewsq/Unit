@@ -1,0 +1,30 @@
+<div style="width: 100%;height: 100%;">
+  <img src="../../assets/53f41cfdde47c.jpg" style="height: 100%;width: 100%;z-index: -1;position: absolute;margin-top: -15px;"/>
+    <div class="content-s">
+        <div class="content-c div-box" style="max-width: 800px;margin: auto">
+          <span class="s-t"><img src='../../assets/UNIT2.png' style="height: 60px;"/></span>
+          <br/>
+          <input
+              placeholder="在线翻译"
+              nz-input
+              [(ngModel)]="inputValue"
+              (ngModelChange)="onInput()"
+              [nzAutocomplete]="auto"
+              style="height: 44px;"
+            />
+          <nz-autocomplete #auto>
+            <nz-auto-option *ngFor="let option of options" [nzValue]="option">
+                {{ option.item1 }} <span style="color: violet">=></span> {{option.item2}}
+              </nz-auto-option>
+          </nz-autocomplete>
+        </div>
+        <div class="div-box">
+          <div class="t-head t-center" style="color: white;font-size: 140px;">
+              {{options[0]?.item1}}
+          </div>
+          <div class="t-desc t-center" style="color: white;font-size: 80px;">
+              {{options[0]?.item2}}
+          </div>
+        </div>
+      </div>
+</div>

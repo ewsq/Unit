@@ -1,0 +1,18 @@
+{
+  "/api/trans/vip/translate":{
+    "target": "http://api.fanyi.baidu.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/trans/vip/translate": ""
+    }
+  },
+  "/api/v1": {
+    "target": "http://47.102.142.251/api/v1",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/v1": ""
+    }
+  }
+}

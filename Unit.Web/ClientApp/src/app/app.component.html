@@ -1,0 +1,58 @@
+
+<div class="box-shadow nav-fix-top">
+    <div class="nav-content" style="position: relative;">
+    <span style="color: white"><a [routerLink]='["/"]'><img src="../assets/UNIT1.png" style="height: 50px;"/></a></span>
+    <div class="title-right">
+        <span *ngIf='ac.token' style="margin-right: 8px;color: white;text-decoration: white;text-decoration-line: underline;font-size: 20px;">{{ac.name}}</span>
+        <nz-avatar nzText="U"
+        [nzSrc]='ac.headImgPath'
+        (click)="visible=!visible;updateDics();"
+        style="margin-top: 10px;"></nz-avatar>
+        <nz-drawer
+          [nzClosable]="false"
+          [nzVisible]="visible"
+          nzPlacement="right"
+          (nzOnClose)='visible=false'
+          nzTitle=" ">
+            <nz-divider nzText="Dics"></nz-divider>
+            <div *ngIf='!ac.token'>
+                <div class="drawer-link-wapper">
+                    <a class="drawer-link" [routerLink]='["/login"]'>登录</a>
+                </div>
+                <div class="drawer-link-wapper">
+                    <a class="drawer-link" [routerLink]='["/register"]'>注册</a>
+                </div>
+            </div>
+            <div *ngIf='ac.token' class="drawer-link-wapper">
+                <nz-upload [(nzFileList)]="fileList" [nzShowButton]="fileList.length<1" [nzBeforeUpload]="beforeUpload">
+                    <button nz-button><i nz-icon type="upload"></i><span>选择头像</span></button>
+                </nz-upload>
+                <button
+                    nz-button
+                    [nzType]="'primary'"
+                    [nzLoading]="uploading"
+                    (click)="handleUpload()"
+                    [disabled]="fileList.length == 0"
+                    style="margin-top: 16px"
+                    >
+                    {{ uploading ? 'Uploading' : 'Start Upload' }}
+                    </button>
+                <a class="drawer-link" style="display: block;" (click)='logout()'>登出</a>
+            </div>
+            <nz-divider nzText="UNIT">core</nz-divider>
+            <div class="drawer-link-wapper">
+                <a class="drawer-link" style="color: blueviolet;font-weight: bold;" [routerLink]='["/createUnit"]'>创建单元</a>
+            </div>
+            <div *ngFor='let d of datas' class="drawer-link-wapper">
+                <a class="drawer-link" [routerLink]='["/dic",{id:d.id}]'>{{d.title}}</a>
+            </div>
+        </nz-drawer>
+    </div>
+  </div>      
+</div>
+
+<div style="padding-top: 90px" [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet" >
+    
+    </router-outlet>
+</div>

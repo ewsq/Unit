@@ -1,0 +1,44 @@
+
+
+<div style="background-color: #2b74f2;width: 100%;height: 100%;position:absolute;margin-top: -17px;">
+    <div class="wapper" style="background-color: white;border-radius: 6px;max-width: 600px;height: 483px;margin: auto;padding: 0;margin-top: 100px;">
+        <div class="content-wapper" style="margin-top: -32px;width: 433px;padding-top: 100px">  
+            <h3 style="margin-bottom: 22px;font-size: 44px;font-weight: bold;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">REGISTER</h3>
+
+              <p style="color: grey">注册你的UNIT账号</p>
+
+          <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()" >
+              <nz-form-item>
+                <nz-form-control>
+                  <nz-input-group>
+                    <input type="text" class="x-input  input-w" nz-input formControlName="userName" placeholder="Username" />
+                  </nz-input-group>
+                  <nz-form-explain *ngIf="validateForm.get('userName')?.dirty && validateForm.get('userName')?.errors"
+                    >Please input your username!</nz-form-explain
+                  >
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-control>
+                  <nz-input-group>
+                    <input type="password" class="x-input input-w" nz-input formControlName="password" placeholder="Password" />
+                  </nz-input-group>
+                  <nz-form-explain *ngIf="validateForm.get('password')?.dirty && validateForm.get('password')?.errors"
+                    >Please input your Password!</nz-form-explain
+                  >
+                </nz-form-control>
+              </nz-form-item>
+              <nz-form-item>
+                <nz-form-control>
+                  <button [nzLoading]='registering' style="width: 100%;font-size: 24px;height: auto;font-weight: bold;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" nz-button class="login-form-button" [nzType]="'primary'">
+                    <i>REGISTER</i>
+                  </button>
+                </nz-form-control>
+              </nz-form-item>
+            </form>
+            <div>
+                <a [routerLink]='["/login"]'>登录UNIT账号</a>
+            </div>
+        </div>
+      </div>
+</div>

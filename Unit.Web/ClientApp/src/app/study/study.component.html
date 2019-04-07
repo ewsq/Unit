@@ -1,0 +1,55 @@
+
+<div style="display: flow-root;">
+    <img style="margin-top:-12px;position: absolute;width: 100%;height:100%;z-index: -1;" [src]='imgp'/>
+<div style="margin: auto;margin-top: 8%;" *ngIf='!complated'>
+    <div class="title">
+        {{locword?.tip}}
+    </div>
+    <div class="desc" *ngIf='appearDesc'>
+        {{locword?.remember}}
+    </div>
+    <div style="text-align: center;margin-top: 100px;" *ngIf='!appearDesc'>
+        <button (click)='remember()' nz-button nzType="primary" style="margin-right: 8px;">
+            我记得
+        </button>
+        <button (click)='forget()' nz-button nzType="danger">
+            我忘记了
+        </button>
+    </div>
+    <div class="next" style="text-align: center;margin-top: 100px;" *ngIf='appearDesc'>
+        <button nz-button nzType='primary' (click)='next()'>
+            下一条
+        </button>
+    </div>
+</div>
+<div style="margin-left: 8%;margin-right: 8%;padding: 44px;margin-top: 40px;background-color: white;border-radius: 6px;" *ngIf='complated'>
+    <div style="margin-top:22px;">
+        <h2 style="text-align: center;">
+        记忆报告
+    </h2>
+    <div *ngFor='let wr of wordRes' nz-row style="font-size: 18px;">
+        <div nz-col nzSpan='2' style="color: #2b74f2">
+            词条
+        </div>
+        <div nz-col nzSpan='2'></div>
+        <div nz-col nzSpan='8'>
+            <b>{{wr.word.tip}}</b>
+        </div>
+        <div nz-col nzSpan='4' style="color: #2b74f2">
+            忘记
+        </div>
+        <div nz-col nzSpan='4'>
+            <b>{{wr.forgetCount}}</b>
+        </div>
+        <div nz-col nzSpan='4' style="color: #2b74f2">
+            次
+        </div>
+    </div>
+    <div style="margin:auto;margin-top: 66px;text-align:center;">
+        <button nz-button nzType="primary" (click)="nextPart()">
+            <i>CONTINUE</i>
+        </button>
+    </div>
+    </div>
+</div>
+</div>
