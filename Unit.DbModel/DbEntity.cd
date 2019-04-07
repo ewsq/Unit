@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Salient.DbModel.DbModelBase" Collapsed="true">
+    <Position X="8.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DbModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.IdentityDbModelBase" Collapsed="true">
+    <Position X="8.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IdentityDbModelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.SProject">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAECAAAABISAAABAAAAAGAAgAIAAAAI=</HashCode>
+      <FileName>SProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.SProjectMember">
+    <Position X="8.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAgAAIAAAAACAgABAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>SProjectMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.SProjectPart">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAAAAAAgAgAAACAAAACIAABAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>SProjectPart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.SRole" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.SUser" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAADAAAAABCAAAAAAAAABAAgQA=</HashCode>
+      <FileName>SUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.SProjectPlan" Collapsed="true">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAgAAAAACAAAACAAABAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>SProjectPlan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.NoSql.WebsiteScore" Collapsed="true">
+    <Position X="24" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>NoSql\WebsiteScore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.Dialog" Collapsed="true">
+    <Position X="17" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAACAQABAACAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Dialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.DialogItem" Collapsed="true">
+    <Position X="19.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAgAAAAAAAAAAAAgAAAIAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>DialogItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.SUserSpace" Collapsed="true">
+    <Position X="0.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>SUserSpace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salient.DbModel.UserFile" Collapsed="true">
+    <Position X="21.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAACAAAAAAAAAAAAAAxAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Salient.DbModel.SProjectModifiableTypes" Collapsed="true">
+    <Position X="15.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAAAAAAA=</HashCode>
+      <FileName>SProject.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Salient.DbModel.SProjectVisiableTypes" Collapsed="true">
+    <Position X="17.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIEAAAAAEAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>SProject.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Salient.DbModel.RepCodes" Collapsed="true">
+    <Position X="24" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAEAQIABAAAAAAAAAAAEAAAgwAAASASABAAAAABAA=</HashCode>
+      <FileName>RepCodes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Salient.DbModel.SProjectMemberTypes" Collapsed="true">
+    <Position X="24" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>SProjectMember.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Salient.DbModel.SpaceVisiableTypes" Collapsed="true">
+    <Position X="25.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>SUserSpace.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
