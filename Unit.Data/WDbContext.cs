@@ -25,7 +25,7 @@ namespace Unit.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql("Server=47.102.142.251;Database=unitdb;User=root;Password=a1-s2=d3f4G5!;");
+            optionsBuilder.UseMySql("Server=;Database=unitdb;User=root;Password=;");
             //var dbc = configuration.GetSection("dbConnection").GetSection("sql");
             //var type = dbc.GetValue<string>("type");
             //switch (type)
